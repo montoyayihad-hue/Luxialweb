@@ -1,0 +1,119 @@
+/* --- CONFIGURACIÓN BASE --- */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: #f8fafc;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* --- LOGO INTEGRADO --- */
+.logo-img {
+    height: 70px; /* Tamaño optimizado para leer el eslogan */
+    width: auto;
+    padding: 5px 0;
+}
+
+/* --- HEADER --- */
+.main-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 8%; background: #ffffff;
+    position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.nav-menu ul { display: flex; list-style: none; gap: 30px; }
+.nav-menu a { text-decoration: none; color: #666; font-weight: 500; transition: 0.3s; }
+.nav-menu a:hover { color: #4A148C; }
+.cta-nav { color: #2f9ff5!important; font-weight: 700; }
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 140px 8%; text-align: center;
+    background-color: #ffffff;
+}
+
+.hero h1 { font-size: 3.5rem; color: #4A148C; margin-bottom: 20px; letter-spacing: -1px; }
+.hero p { font-size: 1.25rem; color: #777; max-width: 650px; margin: 0 auto 40px; }
+
+/* --- TARJETAS SOFT (NEUMORPHISM) --- */
+.card-soft, .fase-item {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 40px;
+    box-shadow: 20px 20px 60px #e2e8f0, -20px -20px 60px #ffffff;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card-soft:hover { transform: translateY(-8px); }
+
+/* --- BOTONES --- */
+.btn-main {
+    display: inline-block; background: #4A148C; color: white;
+    padding: 18px 45px; text-decoration: none; border-radius: 20px;
+    font-weight: bold; box-shadow: 0 10px 25px rgba(74, 20, 140, 0.1);
+    transition: 0.3s;
+}
+
+.btn-main:hover { background: #2f9ff5; color: #4A148C; transform: scale(1.03); }
+
+.btn-whatsapp {
+    display: inline-block; color: #25D366; padding: 12px 25px;
+    text-decoration: none; border-radius: 15px; font-weight: bold;
+    border: 2px solid #25D366; margin-top: 20px; transition: 0.3s;
+}
+
+.btn-whatsapp:hover { background: #25D366; color: white; }
+
+/* --- LAYOUT Y SECCIONES --- */
+.seccion-soft { padding: 100px 8%; text-align: center; }
+.bg-ruta { background-color: #f1f5f9; }
+.titulo-minimal { margin-bottom: 60px; font-size: 2.5rem; color: #4A148C; }
+.grid-layout, .fases-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+
+.tag-soft { display: inline-block; margin-top: 25px; padding: 6px 18px; background: #f1f5f9; color: #2f9ff5; border-radius: 12px; font-size: 0.9rem; font-weight: 600; }
+.emoji-icon { font-size: 3.5rem; display: block; margin-bottom: 25px; }
+
+/* --- FASES RUTA --- */
+.fase-numero { background: #4A148C; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: bold; }
+
+/* --- FORMULARIO --- */
+.form-soft input, .form-soft textarea {
+    width: 100%; padding: 18px; margin-bottom: 20px;
+    border: none; border-radius: 20px; background: #f8fafc;
+    font-size: 1rem;
+}
+
+.whatsapp-border { border-top: 10px solid #25D366; }
+
+.footer-soft { padding: 80px; background: #ffffff; text-align: center; border-top: 1px solid #f1f5f9; color: #94a3b8; }
+/* --- OPTIMIZACIÓN PARA MÓVILES --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem; /* Texto más pequeño en celular para que no se corte */
+    }
+    
+    .main-header {
+        flex-direction: column; /* El logo arriba y el menú abajo */
+        gap: 15px;
+    }
+
+    .nav-menu ul {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .seccion-soft {
+        padding: 60px 5%; /* Menos margen lateral en pantallas pequeñas */
+    }
+
+    .card-soft {
+        padding: 30px 20px; /* Tarjetas más compactas */
+    }
+}
